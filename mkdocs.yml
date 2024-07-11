@@ -1,0 +1,73 @@
+site_name: Saint Mary Church
+nav:
+  - Home: index.md
+  - About: about.md
+  - event: event.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+  
+# theme:
+#   name: readthedocs
+#   highlightjs: true
+#   colorscheme: github
+#   hljs_languages:
+#     - yaml
+#     - rust
+
+
+
+# theme:
+#   name: bootstrap4
+#   highlightjs: true
+#   colorscheme: indigo
+#   palette: 
+#     accent: red
+#   plugins:
+#   - search
+#   - git-committers
+#   - glightbox
+  
+  
+theme:
+  name: material
+  logo: 'assets/img/church_logo.jpg'
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: red
+      accent: blue
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: red
+      accent: lime
+
+# theme: 
+#   name: material
+#   language: en  
+#   highlightjs: true
+# theme:
+#   name: material
+#   palette:
+#     primary: 'indigo'
+#     accent: 'indigo'
+#     toggle:
+#       icon: material/brightness-4
+#       name: switch to dark mode
+#   features: 
+#     - navigation.tabs
+#     - navigation.sections
+#     - toc.integrate
+#   color_mode:
+#   - light 
+#   - dark 
+#   - auto
+#   user_color_mode_toggle:
+#   - color_mode
+

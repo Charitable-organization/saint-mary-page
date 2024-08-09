@@ -14,14 +14,18 @@
     margin-left: 0rem;
     margin-bottom: 0.5rem;
     margin-top: 0rem;
-    width: 13rem;
+
+    width: 18rem;
     align-items: stretch;    
 }
 
 
 [dir=ltr] .md-typeset .inline {
     align-items: stretch;
-    width: 13rem;
+
+    width: 20rem;
+
+
 
 }
 
@@ -61,4 +65,22 @@
     background-color: rgb(30, 47, 204);
     -webkit-mask-image: var(--md-admonition-icon--pola);
             mask-image: var(--md-admonition-icon--pola);
+
   }
+
+.md-typeset table:not([class]) th, .md-typeset table:not([class]) td {
+    padding: 10px 10px;
+    padding-right: 35px;
+    padding-left: 35px;
+    /* border-style: groove; */
+    /* border: 1px solid gray; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* .md-main{
+  background-image:url("assets/img/6.png");
+  backdrop-filter: blur(100%);
+} */
+
+  }
+

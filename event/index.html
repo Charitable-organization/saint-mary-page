@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../style.css">
+      <link rel="stylesheet" href="../custom_extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#calendar-template" class="md-skip">
+        <a href="#yearly-calendar" class="md-skip">
           Skip to content
         </a>
       
@@ -162,11 +162,18 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -529,6 +536,778 @@
                   
 
 
+<h1 id="yearly-calendar">Yearly Calendar<a class="headerlink" href="#yearly-calendar" title="Permanent link">&para;</a></h1>
+<!-- <style>body {text-align: center}</style> -->
+<!-- <p align='right'>THIS TEXT SHOULD BE RIGHT ALIGNED</p> -->
+<!-- !!! pola "pola"
+    This is the note text
+    inside the box -->
+
+<div class="tabbed-set tabbed-alternate" data-tabs="1:12"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Jan...</label><label for="__tabbed_1_2">Feb...</label><label for="__tabbed_1_3">Mar...</label><label for="__tabbed_1_4">Apr...</label><label for="__tabbed_1_5">May..</label><label for="__tabbed_1_6">June..</label><label for="__tabbed_1_7">July..</label><label for="__tabbed_1_8">Aug...</label><label for="__tabbed_1_9">Sep...</label><label for="__tabbed_1_10">Oct...</label><label for="__tabbed_1_11">Nov...</label><label for="__tabbed_1_12">Dec...</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://suscopts.org/resources/literature/517/feast-of-the-holy-nativity/">The Holy Nativity Fast  </a></td>
+<td style="text-align: center;">November 25 – January 6</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://suscopts.org/resources/literature/517/feast-of-the-holy-nativity/">The Holy Nativity Feast </a></td>
+<td style="text-align: center;">January 7–8</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://st-takla.org/books/en/church/synaxarium/05-topah/06-toba-circumcision.html">The Circumcision Feast  </a></td>
+<td style="text-align: center;">January 15</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.suscopts.org/mightyangels/vol2_no1/epiphany.pdf">The Holy Epiphany  </a></td>
+<td style="text-align: center;">January 20</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.suscopts.org/mightyarrows/vol2_no2/weddingfeast.pdf">Feast of the Wedding of Cana of Galilee </a></td>
+<td style="text-align: center;">January 22</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://st-takla.org/books/en/church/synaxarium/06-amsheer/08-amshir-temple.html">Presentation of the Lord into the Temple</a></td>
+<td style="text-align: center;">February 16</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://st-takla.org/Feastes-&amp;-Special-Events/Jonah-s-Fasting__Nineveh-s-Fast/Soom-Yonan__EN-02-Jonah-The-Lord-his-God.html">Jonah's (Nineveh) Fast  </a></td>
+<td style="text-align: center;">February 26–28</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://st-takla.org/Feastes-&amp;-Special-Events/Jonah-s-Fasting__Nineveh-s-Fast/Soom-Yonan__EN-08-Jonah-Whale-Great-City-of-Nineveh.html">Jonah's (Nineveh) Feast </a></td>
+<td style="text-align: center;">February 29</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://suscopts.org/resources/literature/141/the-holy-great-fast-and-spiritual-discipline/">Holy Great Fast  </a></td>
+<td style="text-align: center;">March 11 – April 26</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://suscopts.org/resources/literature/1277/you-have-laid-your-body-like-the-ground-the-cross-/">The Feast of the Cross  </a></td>
+<td style="text-align: center;">March 19</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://st-takla.org/books/en/church/synaxarium/07-baramhat/29-paramhat-annunciation.html">Annunciation Feast </a></td>
+<td style="text-align: center;">April 7</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.suscopts.org/mightyarrows/vol2_no3/lazarus.pdf">Lazarus Saturday  </a></td>
+<td style="text-align: center;">April 27</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.suscopts.org/deacons/church/palm_sunday.html">Entry of our Lord into Jerusalem (Palm Sunday)</a></td>
+<td style="text-align: center;">April 28</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.suscopts.org/q&amp;a/index.php?catid=192">Holy Pascha </a></td>
+<td style="text-align: center;">April 29 – May 1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">Covenant Thursday  </a></td>
+<td style="text-align: center;">May 2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">Good Friday  </a></td>
+<td style="text-align: center;">May 3</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">Glorious Feast of the Resurrection </a></td>
+<td style="text-align: center;">May 5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">Martyrdom of St. Mark the Evangelist  </a></td>
+<td style="text-align: center;">May 8</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">Thomas’ Sunday  </a></td>
+<td style="text-align: center;">May 12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">Entry of the Lord into Egypt </a></td>
+<td style="text-align: center;">June 1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Holy Feast of Ascension  </a></td>
+<td style="text-align: center;">June 13</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Holy Pentecost Feast  </a></td>
+<td style="text-align: center;">June 23</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Apostles' Fast </a></td>
+<td style="text-align: center;">June 24 – July 11</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Apostles' Fast </a></td>
+<td style="text-align: center;">June 24 – July 11</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Apostles' Feast  </a></td>
+<td style="text-align: center;">July 12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">St. Mary's Fast  </a></td>
+<td style="text-align: center;">August 7–21</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">Transfiguration Feast  </a></td>
+<td style="text-align: center;">August 19</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">Assumption of St. Mary's Body  </a></td>
+<td style="text-align: center;">August 22</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Nayrouz Feast (Coptic New Year) </a></td>
+<td style="text-align: center;">September 11</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Feast of the Cross (Three days)  </a></td>
+<td style="text-align: center;">September 27–29</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Holy Nativity Fast  </a></td>
+<td style="text-align: center;">November 25 – January 6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Events</th>
+<th style="text-align: center;">DATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Weekly Wednesday Liturgy</td>
+<td style="text-align: center;">Wednesdays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Sunday Liturgy</td>
+<td style="text-align: center;">Sundays 8:30 AM - 12:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Vespers &amp; Midnight prayers</td>
+<td style="text-align: center;">Tuesdays &amp; Saturdays 7:30 PM - 9:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Youth Meeting</td>
+<td style="text-align: center;">Sundays 1:00 PM - 4:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly KG-12 Sunday School</td>
+<td style="text-align: center;">Sundays 1:00 PM - 2:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fun Artwork</td>
+<td style="text-align: center;">Saturdays 4:00 PM - 6:00 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;">Weekly Fridays Soccer</td>
+<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="../about/">The Holy Nativity Fast  </a></td>
+<td style="text-align: center;">November 25 – January 6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- ??? tip  "January"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`The Holy Nativity Fast`  ](./about.md)                         ||    | November 25 – January 6 | 
+    | [`The Holy Nativity Feast` ](./about.md)                         ||    | January 7–8 |
+    | [`The Circumcision Feast`  ](https://copticheritage.org/05-feast-of-the-circumcision/)  || | January 15 | 
+    | [`The Holy Epiphany`  ](./about.md)                              ||    | January 20 | 
+    | [`Feast of the Wedding of Cana of Galilee` ](./about.md)         ||    | January 22 |
+
+
+??? tip  "February"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`Presentation of the Lord into the Temple`  ](./about.md)       ||    | February 16 | 
+    | [`Jonah's (Nineveh) Fast`  ](./about.md)                         ||    | February 26–28 | 
+    | [`Jonah's (Nineveh) Feast` ](./about.md)                         ||    | February 29 |
+
+??? tip  "March"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`Holy Great Fast`  ](./about.md)                                ||    | March 11 – April 26 | 
+    | [`The Feast of the Cross`  ](./about.md)                         ||    | March 19 | 
+
+??? tip  "April"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`Annunciation Feast` ](./about.md)                              ||    | April 7 |
+    | [`Lazarus Saturday`  ](./about.md)                               ||    | April 27 | 
+    | [`Entry of our Lord into Jerusalem (Hosanna Sunday)`](./about.md)||    | April 28 | 
+
+??? tip  "May"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`Holy Pascha` ](./about.md)                                     ||    | April 29 – May 1 |
+    | [`Covenant Thursday`  ](./about.md)                              ||    | May 2 | 
+    | [`Good Friday`  ](./about.md)                                    ||    | May 3 | 
+    | [`Glorious Feast of the Resurrection` ](./about.md)              ||    | May 5 |
+    | [`Martyrdom of St. Mark the Evangelist`  ](./about.md)           ||    | May 8 | 
+    | [`Thomas’ Sunday`  ](./about.md)                                 ||    | May 12 | 
+
+??? tip  "June"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`Entry of the Lord into Egypt` ](./about.md)                    ||    | June 1 |
+    | [`The Holy Feast of Ascension`  ](./about.md)                    ||    | June 13 | 
+    | [`The Holy Pentecost Feast`  ](./about.md)                       ||    | June 23 | 
+    | [`The Apostles' Fast` ](./about.md)                              ||    | June 24 – July 11 |
+
+??? tip  "July"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`The Apostles' Fast` ](./about.md)                              ||    | June 24 – July 11 |
+    | [`The Apostles' Feast (Martyrdom of St. Peter & St. Paul`  ](./about.md) ||  | July 12 | 
+
+??? tip  "August"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`St. Mary's Fast`  ](./about.md)                                ||    | August 7–21 | 
+    | [`Transfiguration Feast`  ](./about.md)                          ||    | August 19 | 
+    | [`Assumption of St. Mary's Body`  ](./about.md)                  ||    | August 22 | 
+
+??? tip  "September"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`The Nayrouz Feast (Coptic New Year)` ](./about.md)             ||    | September 11 |
+    | [`The Feast of the Cross (Three days)`  ](./about.md)            ||    | September 27–29 | 
+
+??? tip  "October"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+
+??? tip  "November"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`The Holy Nativity Fast`  ](./about.md)                         ||    | November 25 – January 6 | 
+
+??? tip  "December"
+    | Events                                                           ||    | DATE                |
+    | :---------------------------------------------------------------:|-|---| :------------------:|
+    | `Weekly Wednesday Liturgy`                                       ||    | Wednesdays 8:30 AM - 12:00 AM | 
+    | `Weekly Vespers & Midnight prayers`                              ||    | Tuesdays & Saturdays 7:30 PM - 9:30 PM | 
+    | `Weekly Youth Meeting`                                           ||    | Sundays 1:00 PM - 4:00 PM | 
+    | `Weekly KG-12 Sunday School`                                     ||    | Sundays 1:00 PM - 2:00 PM | 
+    | `Weekly Fun Artwork`                                             ||    | Saturdays 4:00 PM - 6:00 PM | 
+    | `Weekly Friday Soccer`                                           ||    | Friday 8:00 PM - 11:30 PM | 
+    | [`The Holy Nativity Fast`  ](./about.md)                         ||    | November 25 – January 6 |  -->
+<p>=======</p>
 <h1 id="calendar-template">Calendar Template<a class="headerlink" href="#calendar-template" title="Permanent link">&para;</a></h1>
 <!-- <style>body {text-align: center}</style> -->
 <!-- <p align='right'>THIS TEXT SHOULD BE RIGHT ALIGNED</p> -->
@@ -818,79 +1597,6 @@ inside the box</p>
 </tbody>
 </table>
 </details>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<!-- ???+ tip inline "Yearly Events"
-    | Trips                         | DATE              |
-    | :---------------------------: | :-----------------: |
-    | [`The Holy Nativity Feast` ](./assets/img/holy_nativity_feast.jpg)| January 7–8 |
-    | [`The Circumcision Feast`  ](https://copticheritage.org/05-feast-of-the-circumcision/)        | January 15 | 
-    | [`The Holy Epiphany`  ](./about.md) | January 20 | 
-    | [`Feast of the Wedding of Cana of Galilee` ](./about.md)| January 22 |
-    | [`Presentation of the Lord into the Temple`  ](./about.md)        | February 16 | 
-    | [`Jonah's (Nineveh) Fast`  ](./about.md) | February 26–28 | 
-    | [`Jonah's (Nineveh) Feast` ](./about.md)| February 29 |
-    | [`Holy Great Fast`  ](./about.md)        | March 11 – April 26 | 
-    | [`The Feast of the Cross`  ](./about.md) | March 19 | 
-    | [`Annunciation Feast` ](./about.md)| April 7 |
-    | [`Lazarus Saturday`  ](./about.md)        | April 27 | 
-    | [`Entry of our Lord into Jerusalem (Hosanna Sunday)`  ](./about.md) | April 28 | 
-    | [`Holy Pascha` ](./about.md)| April 29 – May 1 |
-    | [`Covenant Thursday`  ](./about.md)        | May 2 | 
-    | [`Good Friday`  ](./about.md) | May 3 | 
-    | [`Glorious Feast of the Resurrection` ](./about.md)| May 5 |
-    | [`Martyrdom of St. Mark the Evangelist`  ](./about.md)        | May 8 | 
-    | [`Thomas’ Sunday`  ](./about.md) | May 12 | 
-    | [`Entry of the Lord into Egypt` ](./about.md)| June 1 |
-    | [`The Holy Feast of Ascension`  ](./about.md)        | June 13 | 
-    | [`The Holy Pentecost Feast`  ](./about.md) | June 23 | 
-    | [`The Apostles' Fast` ](./about.md)| June 24 – July 11 |
-    | [`The Apostles' Feast (Martyrdom of St. Peter & St. Paul`  ](./about.md)        | July 12 | 
-    | [`St. Mary's Fast`  ](./about.md) | August 7–21 | 
-    | [`Transfiguration Feast`  ](./about.md)        | August 19 | 
-    | [`Assumption of St. Mary's Body`  ](./about.md) | August 22 | 
-    | [`The Nayrouz Feast (Coptic New Year)` ](./about.md)| September 11 |
-    | [`The Feast of the Cross (Three days)`  ](./about.md)        | September 27–29 | 
-    | [`The Holy Nativity Fast`  ](./about.md) | November 25 – January 6 |  -->
-<p>=======</p>
-<details class="tip inline" open="open">
-<summary>Activities</summary>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Every Week Activities</th>
-<th style="text-align: center;">Grade Level</th>
-<th style="text-align: center;">DATE</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><code>Fun Artwork</code></td>
-<td style="text-align: center;"><code>KG &amp; Elementary</code></td>
-<td style="text-align: center;">Saturday 4:00 PM - 6:00 PM</td>
-</tr>
-<tr>
-<td style="text-align: center;"><code>Fun Friday Soccer</code></td>
-<td style="text-align: center;"><code>High School &amp; Above</code></td>
-<td style="text-align: center;">Friday 8:00 PM - 11:30 PM</td>
-</tr>
-</tbody>
-</table>
-</details>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>0357ef86370fdb6c4bffd4ceedd92d81bd559f3a</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
 
 
 
@@ -911,6 +1617,12 @@ inside the box</p>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -919,6 +1631,30 @@ inside the box</p>
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; Saint Mary Coptic Orthodox Church
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/profile.php?id=100064497108140" target="_blank" rel="noopener" title="Saint Mary church Facebook page" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M80 299.3V512h116V299.3h86.5l18-97.8H196v-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4.4 37 1.2V7.9C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4v42.1H14v97.8h66z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@stmarycopticorthodoxdesmoi7900" target="_blank" rel="noopener" title="Saint Mary church Youtube Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
   
 </div>
       
@@ -932,7 +1668,7 @@ inside the box</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.tabs"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "navigation.instant", "content.shortcuts", "content.update"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
